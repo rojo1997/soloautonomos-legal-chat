@@ -12,7 +12,7 @@ nlp = pipeline(
     device = 0
 )
 
-file = open('Ley de Arrendamientos Urbanos.txt', mode = 'r')
+file = open('app/data/Ley de Arrendamientos Urbanos.txt', mode = 'r')
 context = unidecode.unidecode(file.read().lower())
 file.close()
 
