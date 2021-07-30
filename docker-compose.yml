@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  soloautonomoslegalchat:
+    build: .
+    networks:
+      external_net:
+    ports:
+      - 8080:5000
+    restart: always
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - capabilities: ["gpu"]
+networks:
+  external_net:
+    driver: bridge
