@@ -5,7 +5,7 @@ services:
     networks:
       external_net:
     ports:
-      - 5030:5000
+      - 8080:5000
     restart: always
     deploy:
       resources:

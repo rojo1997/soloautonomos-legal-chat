@@ -18,8 +18,8 @@ file.close()
 
 router = APIRouter()
 
-@router.get("/gptneo")
-def get_gptneo(
+@router.get("/question-answering")
+def get_question_answering(
     question: str = Query("¿La fianza arrendaticia mantiene su carácter obligatorio?")
 ):
     return nlp(
