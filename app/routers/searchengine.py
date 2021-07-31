@@ -20,8 +20,11 @@ router = APIRouter()
 
 @router.get("/question-answering")
 def get_question_answering(
+    password: str = Query(None),
     question: str = Query("¿La fianza arrendaticia mantiene su carácter obligatorio?")
 ):
+    if password != "2021soloautonomos2021":
+        return "No autorizado"
     return nlp(
         {
             'question': question,
